@@ -2,15 +2,16 @@ import React from "react";
 import { Button2 } from "../StyledComonents/Button.style";
 import { DesktopMenu } from "../StyledComonents/DesktopMenu.styles";
 import { HeaderContainer } from "../StyledComonents/Header.styles";
+import { Link } from "react-router-dom";
 import Logo from "./img/QuizLogo.JPG";
 function Header(props) {
   return (
     <HeaderContainer>
-      <img src={Logo} alt="quizLoo"></img>
+      <img src={Logo} alt="quizLogo"></img>
       <DesktopMenu>
-        <p>How it works?</p>
-        <p>Features</p>
-        <p>About us</p>
+        <Link to="home">How it works?</Link>
+        <Link to="features">Features</Link>
+        <Link to="about">About us</Link>
       </DesktopMenu>
       <div>
         <Button2>Login</Button2>
