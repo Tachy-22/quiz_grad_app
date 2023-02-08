@@ -1,0 +1,9 @@
+body,
+html {
+      color: rgb(193, 195, 199);
+
+      margin: 0rem;
+      padding: 0rem;
+      min-height: 100vh;
+      max-width: 100vw;
+}
