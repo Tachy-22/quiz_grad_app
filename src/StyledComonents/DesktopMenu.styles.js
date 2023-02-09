@@ -3,5 +3,5 @@ import styled from "styled-components";
 export const DesktopMenu = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 20rem;
 `;

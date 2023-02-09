@@ -1,6 +1,5 @@
 body,
 html {
-      color: rgb(193, 195, 199);
       margin: 0rem;
       padding: 0rem;
       min-height: 100vh;
@@ -8,10 +7,19 @@ html {
 }
 
 nav a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-decoration: none;
-      color: inherit
+      color: rgb(193, 195, 199);
+      outline: none;
+      text-align: center
 }
 
 nav a.active {
       color: rgb(140, 25, 69);
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
