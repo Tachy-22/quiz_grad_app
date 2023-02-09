@@ -2,14 +2,14 @@ import React from "react";
 import { Button1 } from "../StyledComonents/Button.style";
 import { LandingPageMain } from "../StyledComonents/Background.style";
 import LandingSvg from "./imgB/LandingPageSvg.svg";
-
+import { H1 } from "../StyledComonents/Typography";
 function LandingPage(props) {
   return (
     <>
       <LandingPageMain>
-        <div>
+        <div className="w-1/2 ">
           <div>
-            <h1>Learn new consepts for each question</h1>
+            <H1 className="font-bold">Learn new concepts for each question</H1>
           </div>
           <div>
             <p>We help you prepare for tets and quizes</p>
@@ -19,7 +19,7 @@ function LandingPage(props) {
           </div>
         </div>
 
-        <img src={LandingSvg} alt="svg" />
+        <img className="w-1/2" src={LandingSvg} alt="svg" />
       </LandingPageMain>
     </>
   );
