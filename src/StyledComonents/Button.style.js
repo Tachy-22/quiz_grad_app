@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button1 = styled.button`
-  width: fit;
-
+  width: 7rem;
+  min-width: fit-content;
   background: #fcc822;
   color: white;
   font-size: 1.1rem;
@@ -17,8 +17,8 @@ box-shadow: 0px 9px 5px 7px rgba(0,0,0,0.06);
 `;
 
 export const Button2 = styled.button`
-  width: fit;
-
+  width: 7rem;
+  min-width: fit-content;
   background: white;
   color: #fcc822;
   font-size: 1.1rem;
