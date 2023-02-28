@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { SelectionContainer } from "../StyledComonents/Background.style";
 import { Button1 } from "../StyledComonents/Button.style";
 import { H2, P2 } from "../StyledComonents/Typography";
@@ -40,7 +40,7 @@ function SelectionPopUp() {
     });
     setStateArray(stateArrayUpdate);
   };
- 
+
   //
 
   //
