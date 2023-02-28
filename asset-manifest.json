@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/quiz_grad_app/static/css/main.815f55db.css",
+    "main.js": "/quiz_grad_app/static/js/main.b34ae19c.js",
+    "static/media/Basic_Ui_(186).jpg": "/quiz_grad_app/static/media/Basic_Ui_(186).0401c91fd0717d54d04d.jpg",
+    "static/media/vecteezy_light-gray-abstract-with-white-and-gray-diagonal-rounded_7718244.jpg": "/quiz_grad_app/static/media/vecteezy_light-gray-abstract-with-white-and-gray-diagonal-rounded_7718244.0de9fc76d36e2d54df29.jpg",
+    "static/media/LandingPageSvg.svg": "/quiz_grad_app/static/media/LandingPageSvg.a43cf2e0d065cc9d186a95d1fe28f70c.svg",
+    "static/media/DrawKit Vector Illustration Team Work (19).svg": "/quiz_grad_app/static/media/DrawKit Vector Illustration Team Work (19).9c797edd9d68a964955dfb42be3295b7.svg",
+    "static/media/QuizLogoLarge.JPG": "/quiz_grad_app/static/media/QuizLogoLarge.792e41d156ad0618e411.JPG",
+    "static/media/QuizLogo.JPG": "/quiz_grad_app/static/media/QuizLogo.dcec6ba5c65e3feac215.JPG",
+    "index.html": "/quiz_grad_app/index.html",
+    "main.815f55db.css.map": "/quiz_grad_app/static/css/main.815f55db.css.map",
+    "main.b34ae19c.js.map": "/quiz_grad_app/static/js/main.b34ae19c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.815f55db.css",
+    "static/js/main.b34ae19c.js"
+  ]
+}
