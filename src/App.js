@@ -12,7 +12,7 @@ function App(props) {
   return (
     <Background>
       <Routes>
-        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/quiz_grad_app" element={<LandingPage />}></Route>
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route
