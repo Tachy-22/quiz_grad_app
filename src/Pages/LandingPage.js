@@ -22,7 +22,7 @@ function LandingPage(props) {
           <div>
             <Button2
               onClick={() => {
-                navigate("/quiz_grad_app/login");
+                navigate("/login");
               }}
             >
               Login
