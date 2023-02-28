@@ -48,7 +48,7 @@ function LoginPage() {
         // Signed in
         const user = userCredential.user;
         console.log("user", user);
-        navigate("/home");
+        navigate("/quiz_grad_app/home");
         if (user) {
           console.log("User Signed In");
           setUserState(user.email);
