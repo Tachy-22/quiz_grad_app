@@ -13,14 +13,14 @@ function App(props) {
     <Background>
       <Routes>
         <Route path="/quiz_grad_app" element={<LandingPage />}></Route>
-        <Route path="/login" element={<LoginPage />}></Route>
-        <Route path="/home" element={<Home />}></Route>
+        <Route path="/quiz_grad_app/login" element={<LoginPage />}></Route>
+        <Route path="/quiz_grad_app/home" element={<Home />}></Route>
         <Route
-          path="/home/questionAnsweringPage"
+          path="/quiz_grad_app/home/questionAnsweringPage"
           element={<QustionAnsweringPage />}
         ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
-        <Route path="/test" element={<TestPage />}></Route>
+        <Route path="/quiz_grad_app/test" element={<TestPage />}></Route>
       </Routes>
     </Background>
   );
