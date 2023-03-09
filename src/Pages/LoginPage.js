@@ -37,6 +37,7 @@ function LoginPage() {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorCode, errorMessage);
+
         // ...
       });
   };
@@ -61,6 +62,10 @@ function LoginPage() {
         const errorCode = error.code;
         const errorMessage = error.message;
         alert("Invalid Credentials", errorCode, errorMessage);
+        console.log(errorMessage);
+        if (errorMessage === "Firebase: Error (auth/network-request-failed).") {
+          alert("Check your internet connectiona and try again");
+        }
       });
   };
 

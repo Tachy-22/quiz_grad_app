@@ -5,7 +5,7 @@ import { useState } from "react";
 import QustionAnsweringPage from "./QustionAnsweringPage";
 import HomeHeader from "../Components/HomeHeader";
 
-function Home(props) {
+function Home() {
   const [userEmail, setUserEmail] = useState();
   const [startQuiz, setStartQuiz] = useState(false);
 
@@ -25,11 +25,13 @@ function Home(props) {
     } else {
       // User is signed out
       // ...
+      
     }
   });
-
+  console.log("email1:", userEmail);
   if (startQuiz) {
-    return <QustionAnsweringPage />;
+    
+    return <QustionAnsweringPage userEmail={userEmail} />;
   }
 
   return (

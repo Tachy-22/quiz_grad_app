@@ -30,13 +30,21 @@ nav a.active {
 }
 
 a:hover {
-      color: #fcc822;
+      color: #f7f30f;;
 
 }
 
 input[type=checkbox] {
-      accent-color: #fcc822;
+      accent-color: #f7f30f;;
 
+}
+
+progress::-moz-progress-bar {
+      background-color: #f7f30f;;
+}
+
+progress::-webkit-progress-inner-element {
+      background-color: #f7f30f;
 }
 
 @tailwind base;
