@@ -52,7 +52,11 @@ function QuestionAnsweringPage({ userEmail }) {
 
     optionObject[index].clicked = !optionObject[index].clicked;
     setOptionObject(optionObject);
-    setGenClick(index);
+    if (genClick === index) {
+      setGenClick(100);
+    } else {
+      setGenClick(index);
+    }
   };
   const handleQuestionChange = (event) => {
     event.preventDefault();
