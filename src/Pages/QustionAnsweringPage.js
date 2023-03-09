@@ -4,30 +4,37 @@ import ProgressBar from "../Components/ProgressBar";
 import ScorePage from "../Components/ScorePage";
 import { Button1 } from "../StyledComonents/Button.style";
 import { HeaderContainer } from "../StyledComonents/Header.styles";
+import { useLocation } from "react-router";
 
 function QuestionAnsweringPage({ userEmail }) {
-  const [index, setIndex] = useState();
-  const [optionObject, setOptionObject] = useState();
+  const [genClick, setGenClick] = useState();
+
+  const [indexChosen, setIndexChosen] = useState();
+  const [optionObject, setOptionObject] = useState([]);
   const [count, setCount] = useState(0);
   const [questionArray, setQuestionArray] = useState([]);
-  //const [shuffledOptions, setShuffledOptions]=useState()
+  const location = useLocation();
+  const stateArray = location.state;
+  const catArr = stateArray.map((cats) => cats.cat);
+  const catChosen = catArr.join(",");
+
+  useEffect(() => {
+    fetch(
+      `https://the-trivia-api.com/api/questions?categories=${catChosen}&limit=5`
+    )
+      .then((response) => response.json())
+
+      .then((data) => setQuestionArray(data));
+  }, [catChosen]);
+
   const options = questionArray.map((questionArray) => {
     return [questionArray.correctAnswer, ...questionArray.incorrectAnswers];
   });
-
-  console.log("options", options);
 
   const answer = questionArray.map((answers) => {
     return [answers.correctAnswer];
   });
 
-  useEffect(() => {
-    fetch("https://the-trivia-api.com/api/questions?limit=5")
-      .then((response) => response.json())
-
-      .then((data) => setQuestionArray(data));
-  }, []);
-  console.log(questionArray);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClickFoward = () => {
@@ -36,25 +43,20 @@ function QuestionAnsweringPage({ userEmail }) {
   const handleClickBack = () => {
     setCurrentIndex(currentIndex - 1);
   };
-  console.log("email:", userEmail);
 
-  const handleAnswerSelection = (index, indexChosen, option) => {
-    setIndex(indexChosen);
+  const handleAnswerSelection = (indexChosen, index) => {
+    setIndexChosen(indexChosen);
     const optionObject = options[indexChosen].map((choices) => {
       return { optionVal: choices, clicked: false };
     });
 
     optionObject[index].clicked = !optionObject[index].clicked;
     setOptionObject(optionObject);
-    console.log(
-      "the option selected has clicked value",
-      optionObject[index].clicked
-    );
-    console.log("answer", answer);
+    setGenClick(index);
   };
   const handleQuestionChange = (event) => {
     event.preventDefault();
-
+    setGenClick(100);
     const AnswerObj = optionObject.map((optionObj) => {
       if (optionObj.clicked) {
         return optionObj.optionVal;
@@ -64,24 +66,14 @@ function QuestionAnsweringPage({ userEmail }) {
     });
 
     const chosen = AnswerObj.filter((selected) => selected !== null);
-    console.log(
-      "answer",
-      chosen[0],
-      AnswerObj,
-      AnswerObj.indexOf(answer[index]),
-      answer[index][0]
-    );
-    if (chosen[0] === answer[index][0]) {
+
+    if (chosen[0] === answer[indexChosen][0]) {
       setCount(count + 1);
-      console.log(count);
     } else {
-      console.log(count);
       return count;
     }
   };
-  console.log(count);
-  console.log("This is the optionObject", optionObject);
-
+  console.log(count, "is the score");
   return (
     <div className="flex justify-center">
       <HeaderContainer>
@@ -89,10 +81,10 @@ function QuestionAnsweringPage({ userEmail }) {
       </HeaderContainer>
       <div className="pt-32 w-4/5 h-screen  flex flex-col items-center   bg-white ">
         <ProgressBar currentIndex={currentIndex} />
-        {questionArray.map((questionSet, index1) => {
+        {questionArray.map((questionSet, indexChosen) => {
           return (
-            <div className="min-w-full  " key={index1}>
-              {currentIndex === index1 && (
+            <div className="min-w-full  " key={indexChosen}>
+              {currentIndex === indexChosen && (
                 <div>
                   <div className="flex flex-col justify-center items-center p-10  h-96 w-full bg-yellow-400 ">
                     <h1 className=" text-center text-white text-3xl font-semibold">
@@ -100,14 +92,16 @@ function QuestionAnsweringPage({ userEmail }) {
                     </h1>
                   </div>
                   <div className="flex ">
-                    {options[index1].map((option, index) => {
+                    {options[indexChosen].map((option, index) => {
                       return (
                         <div
                           onClick={() => {
-                            handleAnswerSelection(index, index1, option);
+                            handleAnswerSelection(indexChosen, index);
                           }}
                           key={index}
-                          className={`flex justify-center items-center  border-4 border-gray-400 rounded-lg p-5 mx-5 my-10  h-32 w-full cursor-pointer`}
+                          className={`flex justify-center ${
+                            index === genClick ? "bg-yellow-400" : "bg-gray-300"
+                          } items-center  border-4 border-gray-400 rounded-lg p-5 mx-5 my-10  h-32 w-full cursor-pointer`}
                         >
                           <p>{option}</p>
                         </div>

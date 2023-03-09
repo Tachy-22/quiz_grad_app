@@ -35,10 +35,10 @@ function SelectionPopUp() {
   //
   const handleQuizStart = () => {
     console.log("newcategories", newCategories);
-    const stateArrayUpdate = newCategories.map((category) => {
-      return category.state;
-    });
-    setStateArray(stateArrayUpdate);
+    const selctedCategories = newCategories.filter(
+      (category) => category.state === true
+    );
+    setStateArray(selctedCategories);
   };
 
   //
@@ -50,8 +50,8 @@ function SelectionPopUp() {
   //console.log("category2", stateArray);
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("stateArray3", stateArray);
-    navigate("/home/questionAnsweringPage");
+    console.log("stateArray", stateArray);
+    navigate("/home/questionAnsweringPage", { state: stateArray });
   };
   return (
     <>
