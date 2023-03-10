@@ -48,11 +48,13 @@ function LandingPage(props) {
             </div>
           </div>
 
-          <img
-            className=" w-11/12 md:pt-0 pt-10 rounded-xl"
-            src={LandingSvg}
-            alt="svg"
-          />
+          <picture className="w-11/12">
+            <img
+              className=" w-full md:pt-0 pt-10 "
+              src={LandingSvg}
+              alt="svg"
+            />
+          </picture>
         </LandingPageMain>
       </Background>
     </>
