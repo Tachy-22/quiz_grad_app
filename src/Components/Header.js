@@ -6,7 +6,10 @@ import Logo from "../img/QuizLogo.JPG";
 function Header() {
   return (
     <>
-      <img src={Logo} alt="quizLogo"></img>
+      <picture className="flex flex-col justify-center items center ">
+        <img className="h-1/2" src={Logo} alt="quizLogo"></img>
+      </picture>
+
       <DesktopMenu>
         <NavLink to="/base">How it works?</NavLink>
         <NavLink to="/features">Features</NavLink>

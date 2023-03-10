@@ -85,7 +85,7 @@ function QuestionAnsweringPage({ userEmail }) {
       <HeaderContainer>
         <HomeHeader userEmail={userEmail} />
       </HeaderContainer>
-      <div className="pt-32 w-4/5 h-screen  flex flex-col items-center   bg-white ">
+      <div className="pt-32 md:w-4/5 md:mx-0 mx-5 md:h-screen h-4/5 overflow-y-scroll  flex flex-col items-center   bg-white pb-10 mb-4">
         <ProgressBar currentIndex={currentIndex} />
         {questionArray.map((questionSet, indexChosen) => {
           return (
@@ -93,11 +93,11 @@ function QuestionAnsweringPage({ userEmail }) {
               {currentIndex === indexChosen && (
                 <div>
                   <div className="flex flex-col justify-center items-center p-10  h-96 w-full bg-yellow-400 ">
-                    <h1 className=" text-center text-white text-3xl font-semibold">
+                    <h1 className=" text-center text-white text-3xl font-semibold ">
                       {questionSet.question}
                     </h1>
                   </div>
-                  <div className="flex ">
+                  <div className="flex md:flex-row flex-col md:px-0 px-8">
                     {options[indexChosen].map((option, index) => {
                       return (
                         <div
@@ -105,9 +105,9 @@ function QuestionAnsweringPage({ userEmail }) {
                             handleAnswerSelection(indexChosen, index);
                           }}
                           key={index}
-                          className={`flex justify-center ${
+                          className={`flex  justify-center ${
                             index === genClick ? "bg-yellow-400" : "bg-gray-300"
-                          } items-center  border-4 border-gray-400 rounded-lg p-5 mx-5 my-10  h-32 w-full cursor-pointer`}
+                          } items-center  border-4 border-gray-400 rounded-lg p-5 md:mx-5  md:my-10 mt-5  md:h-32 w-full cursor-pointer`}
                         >
                           <p>{option}</p>
                         </div>
