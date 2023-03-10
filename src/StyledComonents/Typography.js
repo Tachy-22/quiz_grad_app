@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const H1 = styled.h1`
   font-size: 4rem;
   font-weight: 600;
+  @media (max-width: 576px) {
+    font-size: 3rem;
+    font-weight: 600;
+  }
 `;
 export const H2 = styled.h1`
   font-size: 3rem;

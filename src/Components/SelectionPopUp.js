@@ -68,15 +68,12 @@ function SelectionPopUp() {
                   onClick={() => {
                     handleSelect(index, category, category.state);
                   }}
-                  className={
-                    category.state
-                      ? " bg-yellow-400 w-52 h-14 m-3 flex justify-between items-center"
-                      : "bg-gray-400 w-52 h-14 m-3 flex justify-between items-center"
-                  }
+                  className={`${
+                    !category.state ? "bg-gray-400" : "bg-yellow-400"
+                  } w-52 h-14 m-3 flex justify-between items-center`}
                 >
                   <h1 className="font-semibold text-center w-full">
-                    {" "}
-                    {category.cat}
+                    {category.catName}
                   </h1>
                   {category.state && (
                     <img className="h-full bg-white" src={Close} alt="close" />

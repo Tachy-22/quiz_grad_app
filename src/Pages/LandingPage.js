@@ -31,14 +31,14 @@ function LandingPage(props) {
         </HeaderContainer>
 
         <LandingPageMain>
-          <div className="w-1/2 space-y-20 pb-32 pl-40">
-            <div className="w-4/5">
+          <div className="lg:w-full h-3/5 lg:pl-40  pl space-y-20 md:pb-32  px-24 sm:pb-5 pt-40 ">
+            <div className=" w-full md:flex flex-col ">
               <H1>Learn </H1>
               <H1>new concepts</H1>
               <H1>for each question</H1>
             </div>
             <div>
-              <p className="border-l-4 solid border-gray-500 pl-3 text-3xl text-gray-400 font-semibold ">
+              <p className="border-l-4 solid border-gray-500 pl-3 sm:pl-0 text-3xl text-gray-400 font-semibold ">
                 We help you prepare for tests and quizes
               </p>
             </div>
@@ -48,7 +48,11 @@ function LandingPage(props) {
             </div>
           </div>
 
-          <img className="w-1/2 rounded-xl" src={LandingSvg} alt="svg" />
+          <img
+            className="w-4/5 md:w-full md:pt-0 pt-10 rounded-xl"
+            src={LandingSvg}
+            alt="svg"
+          />
         </LandingPageMain>
       </Background>
     </>

@@ -8,7 +8,6 @@ import { useLocation } from "react-router";
 
 function QuestionAnsweringPage({ userEmail }) {
   const [genClick, setGenClick] = useState();
-
   const [indexChosen, setIndexChosen] = useState();
   const [optionObject, setOptionObject] = useState([]);
   const [count, setCount] = useState(0);
@@ -27,9 +26,11 @@ function QuestionAnsweringPage({ userEmail }) {
       .then((data) => setQuestionArray(data));
   }, [catChosen]);
 
-  const options = questionArray.map((questionArray) => {
-    return [questionArray.correctAnswer, ...questionArray.incorrectAnswers];
-  });
+  const options = questionArray.map((questionArray) => [
+    questionArray.correctAnswer,
+    ...questionArray.incorrectAnswers,
+  ]);
+  console.log("options", options);
 
   const answer = questionArray.map((answers) => {
     return [answers.correctAnswer];
@@ -46,6 +47,7 @@ function QuestionAnsweringPage({ userEmail }) {
 
   const handleAnswerSelection = (indexChosen, index) => {
     setIndexChosen(indexChosen);
+
     const optionObject = options[indexChosen].map((choices) => {
       return { optionVal: choices, clicked: false };
     });

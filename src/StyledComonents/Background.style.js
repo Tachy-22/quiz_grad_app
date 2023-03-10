@@ -14,6 +14,10 @@ export const LandingPageMain = styled.div`
   align-items: center;
   min-height: 100vh;
   // padding: 10rem 7rem;
+  @media (max-width: 960px) {
+    flex-direction: column-reverse;
+    width: 100vw;
+  }
 `;
 
 export const SelectionContainer = styled.div`
