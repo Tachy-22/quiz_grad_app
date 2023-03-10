@@ -86,11 +86,11 @@ function LoginPage() {
         <div className="flex flex-row  min-h-screen">
           <form
             onSubmit={handleSubmit}
-            className=" flex flex-col  space-y-16 bg-white  w-1/2  px-52  "
+            className=" flex flex-col  space-y-16 bg-white  md:w-1/2 w-full  lg:px-32 px-10 "
           >
             <div className="flex flex-col">
               <img src={Logo} alt="Logo"></img>
-              <div className="flex flex-col justify-center items-center text-2xl font-semibold">
+              <div className="flex flex-col justify-center items-center text-center text-2xl font-semibold">
                 <P>Welcome back!</P>
                 <P>Please login/Sign up to your account.</P>
               </div>
@@ -137,7 +137,9 @@ function LoginPage() {
               <Link>Google</Link>
             </div>
           </form>
-          <img className="w-1/2" src={LoginImg} alt="loginImg"></img>
+          <picture className=" md:flex w-1/2 hidden justify-center">
+            <img className="w-full" src={LoginImg} alt="loginImg"></img>
+          </picture>
         </div>
       </Background>
     </>
