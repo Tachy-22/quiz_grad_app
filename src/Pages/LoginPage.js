@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Button1, Button2 } from "../StyledComonents/Button.style";
 import { P } from "../StyledComonents/Typography";
 import LoginImg from "../img/DrawKit Vector Illustration Team Work (19).svg";
+import LoginImg2 from "../img/DrawKit Vector Illustration Team Work (14).svg";
 import { Background } from "../StyledComonents/Background.style";
 import { useState } from "react";
 import {
@@ -137,8 +138,9 @@ function LoginPage() {
               <Link>Google</Link>
             </div>
           </form>
-          <picture className=" md:flex w-1/2 hidden justify-center">
-            <img className="w-full" src={LoginImg} alt="loginImg"></img>
+          <picture className=" md:flex flex-col w-1/2 hidden justify-center">
+            <img className="w-full " src={LoginImg} alt="loginImg"></img>
+            <img className="w-full " src={LoginImg2} alt="loginImg"></img>
           </picture>
         </div>
       </Background>
@@ -147,3 +149,5 @@ function LoginPage() {
 }
 
 export default LoginPage;
+
+
