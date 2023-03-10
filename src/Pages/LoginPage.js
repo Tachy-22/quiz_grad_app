@@ -4,7 +4,7 @@ import { TextBoxContainer } from "../StyledComonents/TextBox.style";
 import { Textbox } from "../StyledComonents/TextBox.style";
 import { Link } from "react-router-dom";
 import { Button1, Button2 } from "../StyledComonents/Button.style";
-import { P } from "../StyledComonents/Typography";
+import { P, P2 } from "../StyledComonents/Typography";
 import LoginImg from "../img/DrawKit Vector Illustration Team Work (19).svg";
 import LoginImg2 from "../img/DrawKit Vector Illustration Team Work (14).svg";
 import { Background } from "../StyledComonents/Background.style";
@@ -87,7 +87,7 @@ function LoginPage() {
         <div className="flex flex-row  min-h-screen">
           <form
             onSubmit={handleSubmit}
-            className=" flex flex-col  space-y-16 bg-white  md:w-1/2 w-full  lg:px-32 px-10 "
+            className=" flex flex-col justify-center  space-y-16 bg-white  md:w-1/2 w-full  lg:px-32 px-10 "
           >
             <div className="flex flex-col">
               <img src={Logo} alt="Logo"></img>
@@ -133,14 +133,13 @@ function LoginPage() {
               <Button2 onClick={signUp}>Sign up</Button2>
             </div>
             <div className="flex space-x-8">
-              <P> Or login with</P>
+              <P2> Or login with</P2>
               <Link>Facebook</Link>
               <Link>Google</Link>
             </div>
           </form>
           <picture className=" md:flex flex-col w-1/2 hidden justify-center">
             <img className="w-full " src={LoginImg} alt="loginImg"></img>
-            <img className="w-full " src={LoginImg2} alt="loginImg"></img>
           </picture>
         </div>
       </Background>
@@ -149,5 +148,3 @@ function LoginPage() {
 }
 
 export default LoginPage;
-
-

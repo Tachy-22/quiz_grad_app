@@ -22,5 +22,5 @@ export const P = styled.h1`
 `;
 export const P2 = styled.h1`
   color: rgb(139, 141, 142);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `;
