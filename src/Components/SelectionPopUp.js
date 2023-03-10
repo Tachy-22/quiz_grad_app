@@ -82,7 +82,7 @@ function SelectionPopUp() {
               );
             })}
           </div>
-          <div className="absolute right-0 bottom-0 m-16">
+          <div className="md:absolute right-0 bottom-0 m-16">
             <form
               onSubmit={(event) => {
                 handleSubmit(event);

@@ -11,6 +11,9 @@ export const H1 = styled.h1`
 export const H2 = styled.h1`
   font-size: 3rem;
   font-weight: 400;
+  @media (max-width: 576px) {
+    font-size: 2rem;
+  }
 `;
 
 export const P = styled.h1`

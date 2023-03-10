@@ -30,7 +30,6 @@ export const LandingPageMain = styled.div`
 export const SelectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  //justify-content: center;
   align-items: center;
   position: relative;
   background-color: white;
@@ -38,4 +37,10 @@ export const SelectionContainer = styled.div`
   height: 70%;
   padding: 2.5rem;
   gap: 1rem;
+  @media (max-width: 576px) {
+    margin-top: 3rem;
+    overflow-y: scroll;
+    min-height: 70vh;
+    padding: 1rem;
+  }
 `;
