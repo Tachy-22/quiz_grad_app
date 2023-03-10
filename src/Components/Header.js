@@ -8,11 +8,9 @@ function Header() {
     <>
       <img src={Logo} alt="quizLogo"></img>
       <DesktopMenu>
-        <div className="md:flex hidden">
-          <NavLink to="/base">How it works?</NavLink>
-          <NavLink to="/features">Features</NavLink>
-          <NavLink to="/about">About us</NavLink>
-        </div>
+        <NavLink to="/base">How it works?</NavLink>
+        <NavLink to="/features">Features</NavLink>
+        <NavLink to="/about">About us</NavLink>
       </DesktopMenu>
     </>
   );

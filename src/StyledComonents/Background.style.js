@@ -7,16 +7,23 @@ export const Background = styled.div`
   background-image: url(${BackgroundImg});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 `;
 export const LandingPageMain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  // padding: 10rem 7rem;
+  width: 100vw;
+  max-width: 100vw;
+
   @media (max-width: 960px) {
     flex-direction: column-reverse;
-    width: 100vw;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  @media (max-width: 570px) {
+    padding: 0rem;
   }
 `;
 
