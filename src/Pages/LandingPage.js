@@ -49,7 +49,7 @@ function LandingPage(props) {
           </div>
 
           <img
-            className="w-full hidden  md:pt-0 pt-10 rounded-xl"
+            className=" w-11/12 md:pt-0 pt-10 rounded-xl"
             src={LandingSvg}
             alt="svg"
           />
