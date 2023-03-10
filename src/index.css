@@ -30,21 +30,30 @@ nav a.active {
 }
 
 a:hover {
-      color: #f7f30f;;
+      color: #f7f30f;
 
 }
 
 input[type=checkbox] {
-      accent-color: #f7f30f;;
+      accent-color: #f7f30f;
+      ;
 
 }
 
 progress::-moz-progress-bar {
-      background-color: #f7f30f;;
+      background-color: #f7f30f;
+      ;
 }
 
 progress::-webkit-progress-inner-element {
       background-color: #f7f30f;
+}
+
+.bg-scoreImage {
+      background-image: url('./img/Celebration.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
 }
 
 @tailwind base;
