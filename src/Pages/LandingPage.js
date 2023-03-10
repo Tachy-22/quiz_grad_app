@@ -31,8 +31,8 @@ function LandingPage(props) {
         </HeaderContainer>
 
         <LandingPageMain>
-          <div className="lg:w-full h-3/5 lg:pl-40  pl space-y-20 md:pb-32  px-24 sm:pb-5 pt-40 ">
-            <div className=" w-full md:flex flex-col ">
+          <div className="lg:w-3/5 md:w-2/5 w-full h-3/5 lg:pl-40  pl space-y-20 md:pb-32  px-12  sm:pb-5 md:pt-40 ">
+            <div className=" w-full ">
               <H1>Learn </H1>
               <H1>new concepts</H1>
               <H1>for each question</H1>
@@ -49,7 +49,7 @@ function LandingPage(props) {
           </div>
 
           <img
-            className="w-4/5 md:w-full md:pt-0 pt-10 rounded-xl"
+            className="w-full md:pt-0 pt-10 rounded-xl"
             src={LandingSvg}
             alt="svg"
           />
