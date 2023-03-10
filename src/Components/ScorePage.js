@@ -9,14 +9,14 @@ function ScorePage({ score }) {
   };
   return (
     <div
-      className={`bg-scoreImage text-white flex flex-col items-center md:justify-center justify-end relative bg-white md:w-1/2 w-11/12 h-3/5 p-10 rounded-md `}
+      className={`bg-scoreImage text-white flex flex-col items-center md:justify-center justify-start relative bg-white md:w-1/2 w-11/12 h-3/5 p-2 rounded-md `}
     >
-      <div className="flex flex-col bg-yellow-300 md:w-72 w-52 md:h-72 h-52 justify-center items-center text-center rounded-full p-5">
-        <p className="text-2xl">Your score is</p>
+      <div className="flex flex-col bg-yellow-300  w-48  md:h-72 justify-center items-center text-center   p-5 rounded-full">
+        <p className="text-xl">Your score is</p>
         <p className=" text-9xl">{score}</p>
       </div>
-      <form onSubmit={handleCompletion}>
-        <div className="md:absolute bottom-5 right-5 pt-8">
+      <form className="h-full flex items-end" onSubmit={handleCompletion}>
+        <div className="md:absolute bottom-5 right-5 ">
           <Button1>Complete</Button1>
         </div>
       </form>
