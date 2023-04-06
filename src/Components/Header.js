@@ -6,7 +6,7 @@ import Logo from "../img/QuizLogo.JPG";
 function Header() {
   return (
     <>
-      <picture className="flex flex-col justify-center items center ">
+      <picture className="flex flex-col justify-center items center z-100">
         <img className="h-1/2" src={Logo} alt="quizLogo"></img>
       </picture>
 

@@ -7,7 +7,7 @@ function HomeHeader({ userEmail }) {
   return (
     <>
       <Header />
-      <div className="flex flex-col  items-center">
+      <div className="flex flex-col  items-center z-40 ">
         <picture className=" w-16 h-full py-2 flex flex-col justify-center items-center bg-gray-300 rounded-full">
           <img
             className="w-12 rounded-full "

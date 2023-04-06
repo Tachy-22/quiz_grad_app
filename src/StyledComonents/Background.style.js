@@ -33,10 +33,12 @@ export const SelectionContainer = styled.div`
   align-items: center;
   position: relative;
   background-color: white;
-  width: 70%;
-  height: 70%;
-  padding: 2.5rem;
+  width: fit-content;
+  height: max-content;
+  padding: 2.5rem 0 0;
   gap: 1rem;
+  margin-top: 3rem;
+  overflow-y: auto;
   @media (max-width: 576px) {
     margin-top: 3rem;
     overflow-y: scroll;
